@@ -30,7 +30,16 @@ public class OceanQuakeMarker extends EarthquakeMarker {
 		// and how it is set in the EarthquakeMarker constructor
 		
 		// TODO: Implement this method
-		
+		float m = this.radius;
+		pg.rect(x-(m/2), y-(m/2), this.radius, this.radius);
+		String com = (String) this.getProperty("age");
+		if(com.contains("Past Week"))
+		{
+			 pg.strokeWeight(2);
+			 pg.fill(0, 0, 0);
+			 pg.line(x - m, y - m, x + m, y + m);
+			 pg.line(x + m, y - m, x - m, y + m);
+		}
 	}
 	
 

@@ -33,6 +33,20 @@ public class LandQuakeMarker extends EarthquakeMarker {
 		// and how it is set in the EarthquakeMarker constructor
 		
 		// TODO: Implement this method
+		 
+		 pg.ellipse(x, y, this.radius, this.radius);
+		 String com = (String) this.getProperty("age");
+		 float m = this.radius;
+		 if(com.contains("Past Week"))
+		 {
+			 pg.strokeWeight(2);
+			 pg.fill(0, 0, 0);
+			 pg.line(x - m, y - m, x + m, y + m);
+			 pg.line(x + m, y - m, x - m, y + m);
+		 }
+
+		 
+
 		
 	}
 	

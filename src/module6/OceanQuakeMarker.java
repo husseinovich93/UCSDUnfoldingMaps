@@ -29,6 +29,21 @@ public class OceanQuakeMarker extends EarthquakeMarker {
 		pg.rect(x-radius, y-radius, 2*radius, 2*radius);
 	}
 	
+	public void drawLines(PGraphics pg, float x, float y , float xx, float yy)
+	{
+		if(!hidden)  
+		{
+			if(clicked)
+			{
+				pg.line(x,y,xx,yy);
+			}
+			else
+			{
+				pg.clear();
+			}
+		}
+	}
+	
 
 	
 

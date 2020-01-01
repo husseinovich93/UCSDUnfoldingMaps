@@ -94,10 +94,18 @@ public abstract class EarthquakeMarker extends CommonMarker
 	public void showTitle(PGraphics pg, float x, float y)
 	{
 		// TODO: Implement this method
+		String titleName = getTitle();
+		float depthName =getDepth();
+		float magnitute = getMagnitude();
+		pg.fill(255,255,204);
+		pg.rect(x + radius * 3/2 - 1, y - 1, 400, 20 , 6) ;
+		pg.textSize(12);
+		pg.fill(50);
+		pg.text(titleName + depthName + magnitute , x + radius * 2 , y + radius * 3/2);
 		
 	}
 
-	
+
 	/**
 	 * Return the "threat circle" radius, or distance up to 
 	 * which this earthquake can affect things, for this earthquake.   

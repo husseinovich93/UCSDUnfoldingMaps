@@ -42,8 +42,19 @@ public abstract class CommonMarker extends SimplePointMarker {
 		// For starter code just drawMaker(...)
 		if (!hidden) {
 			drawMarker(pg, x, y);
-			if (selected) {
-				showTitle(pg, x, y);
+		}
+	}
+	public void drawTitleOnTopOfTheBuffer(PGraphics pg, float x, float y)
+	{
+		if(!hidden)
+		{
+			if(selected)
+			{
+				showTitle(pg,x,y);
+			}
+			else
+			{
+				pg.clear();
 			}
 		}
 	}
